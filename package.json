@@ -1,0 +1,65 @@
+{
+  "name": "butler",
+  "description": "best butler around here",
+  "version": "0.0.0",
+  "author": "Antoine Renault @Aktanee",
+  "bin": {
+    "butler": "./bin/run"
+  },
+  "bugs": "https://github.com/Aktanee/butler/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2",
+    "@types/inquirer": "^0.0.43",
+    "chalk": "^2.4.1",
+    "cli-table": "^0.3.1",
+    "dotenv": "^6.2.0",
+    "dotenv-safe": "^6.1.0",
+    "inquirer": "^6.2.1",
+    "tslib": "^1",
+    "ttab": "^0.6.1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@oclif/tslint": "^3",
+    "@types/chai": "^4",
+    "@types/mocha": "^5",
+    "@types/node": "^10",
+    "globby": "^8",
+    "ts-node": "^7",
+    "tslint": "^5",
+    "typescript": "^3.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/Aktanee/butler",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "butler",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "Aktanee/butler",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "tslint -p . -t stylish",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}
