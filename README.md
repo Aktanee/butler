@@ -3,7 +3,7 @@ butler
 
 best butler around here.
 
-This is an util project used to quicly launch projects . 
+This is an util project used to quicly launch projects. 
 The main use is the `serve` command that will open a new tab in iTerm with the 
 correct project command.
 
@@ -19,8 +19,7 @@ yarn;
 yarn link; # Install the `butler` command with npm globally
 
 # config
-cp .env.dist .env;
-# Modify the .env with the correct path for each repo
+# Modify the config.ts with the correct path for each repo
 
 # Butler uses
 butler help; # give command
