@@ -17,6 +17,8 @@ All the configuration part will be done inside `config.ts` located at the root o
 You will need to add the path, the name and the command you wish to use on every project.
 
 ```typescript
+# The default configuration file contains this.
+
 const paths: Paths = {
   projectEnvironmentName: [
     {
@@ -28,6 +30,8 @@ const paths: Paths = {
   ]
 }
 ```
+
+
 
 # Usage
 
