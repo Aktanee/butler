@@ -14,7 +14,8 @@ yarn link; # Install the `butler` command with npm globally
 ## User configuration
 
 All the configuration part will be done inside `config.ts` located at the root of the project. The reasoning behind why it's not simply a JSON file is too let the use of environment variables.
-You will need to add the path, the name and the command you wish to use on every project.
+You will need to add the path, the name and the command you wish to use on every project. 
+This assumes that all the project are properly set up already.
 
 ```typescript
 # The default configuration file contains this.
@@ -29,9 +30,32 @@ const paths: Paths = {
     }
   ]
 }
+
+# You can add your projects environment like this:
+const paths: Paths = {
+  projectA: [
+    {
+      path: '/project/api',
+      command: 'docker-compose up',
+      name: 'api'
+    },
+    {
+      path: '/project/client',
+      command: 'yarn dev',
+      browser: 'http://localhost:5000',
+      name: 'client',
+    }
+  ],
+  projectB: [
+    {
+      path: '/project/rails',
+      command: 'bin/rails server',
+      browser: 'http://localhost:3000',
+      name: 'rails project'
+    }
+  ]
+}
 ```
-
-
 
 # Usage
 
